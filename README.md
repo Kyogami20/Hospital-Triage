@@ -204,7 +204,7 @@ MediTriage.exe
 | Quispe Mejia, Ricardo Antonio | [Rol] |
 | [Palomino Antón, Leonardo David] | [Rol] |
 | Arias Mandarachi, Bastian | [Rol] |
-| [Compañero 5] | [Rol] |
+| De la Cruz Antay, Adrian Avelino| [Rol] |
 | [Compañero 6] | [Rol] |
 | [Compañero 7] | [Rol] |
 | [Compañero 8] | [Rol] |
