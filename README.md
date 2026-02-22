@@ -205,7 +205,7 @@ MediTriage.exe
 | Palomino Antón, Leonardo David | [Rol] |
 | Arias Mandarachi, Bastian | [Rol] |
 | De la Cruz Antay, Adrian Avelino| [Rol] |
-| [Compañero 6] | [Rol] |
+| Paredes Galvez, Piero Alfonso | [Rol] |
 | [Compañero 7] | [Rol] |
 | [Compañero 8] | [Rol] |
 
