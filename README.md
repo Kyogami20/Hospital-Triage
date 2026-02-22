@@ -5,8 +5,7 @@
 
 ![C++](https://img.shields.io/badge/C++-17-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Qt](https://img.shields.io/badge/Qt-6.x-41CD52?style=for-the-badge&logo=qt&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![License](https://img.shields.io/badge/Licencia-MIT-yellow?style=for-the-badge)
+![SQL](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Status](https://img.shields.io/badge/Estado-En%20Desarrollo-orange?style=for-the-badge)
 
 > **Proyecto Final — Curso de Estructura de Datos**  
@@ -140,7 +139,7 @@ Antes de compilar el proyecto, asegúrate de tener instalado:
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/usuario/meditriage.git
+git clone https://github.com/Kyogami20/Hospital-Triage.git
 cd meditriage
 ```
 
