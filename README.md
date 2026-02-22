@@ -202,7 +202,7 @@ MediTriage.exe
 |---|---|
 | [Compañero 1] | [Rol] |
 | Quispe Mejia, Ricardo Antonio | [Rol] |
-| [Palomino Antón, Leonardo David] | [Rol] |
+| Palomino Antón, Leonardo David | [Rol] |
 | Arias Mandarachi, Bastian | [Rol] |
 | De la Cruz Antay, Adrian Avelino| [Rol] |
 | [Compañero 6] | [Rol] |
