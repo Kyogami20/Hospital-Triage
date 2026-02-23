@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meditriage.controller.MainController"
+            prefWidth="1280" prefHeight="800">
+
+    <!-- ═══════════════════════════ SIDEBAR ═══════════════════════════ -->
+    <left>
+        <VBox styleClass="sidebar" spacing="0">
+
+            <!-- Logo / Título -->
+            <VBox styleClass="sidebar-header" spacing="4">
+                <Label text="🏥 MediTriage" styleClass="sidebar-title"/>
+                <Label text="Sistema de Triaje Hospitalario" styleClass="sidebar-subtitle"/>
+            </VBox>
+
+            <Separator/>
+
+            <!-- Menú de navegación -->
+            <VBox spacing="2" style="-fx-padding: 12 0 12 0;">
+                <Button fx:id="btnDashboard" text="⬛  Dashboard"
+                        styleClass="nav-button" onAction="#onDashboard"
+                        maxWidth="Infinity"/>
+                <Button fx:id="btnRegister"  text="➕  Registrar Paciente"
+                        styleClass="nav-button" onAction="#onRegister"
+                        maxWidth="Infinity"/>
+                <Button fx:id="btnQueue"     text="🩺  Cola Prioritaria"
+                        styleClass="nav-button" onAction="#onQueue"
+                        maxWidth="Infinity"/>
+                <Button fx:id="btnSearch"    text="🔍  Buscar"
+                        styleClass="nav-button" onAction="#onSearch"
+                        maxWidth="Infinity"/>
+                <Button fx:id="btnHistory"   text="📋  Historial"
+                        styleClass="nav-button" onAction="#onHistory"
+                        maxWidth="Infinity"/>
+            </VBox>
+
+            <!-- Spacer -->
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Separator/>
+
+            <!-- Estado de la BD -->
+            <VBox style="-fx-padding: 12 16 16 16;" spacing="4">
+                <Label text="MediTriage v1.0.0" style="-fx-text-fill: #555577; -fx-font-size: 10px;"/>
+                <Label fx:id="lblDbStatus" text="● BD: Verificando..."
+                       styleClass="db-status-ok"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- ══════════════════════ ÁREA DE CONTENIDO ═══════════════════════ -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #f0f2f5;">
+            <!-- Las vistas se cargan dinámicamente aquí -->
+        </StackPane>
+    </center>
+</BorderPane>

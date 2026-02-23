@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meditriage.controller.RegisterController"
+            fitToWidth="true"
+            style="-fx-background-color: #f0f2f5; -fx-background: #f0f2f5;"
+            hbarPolicy="NEVER">
+
+    <VBox spacing="24" style="-fx-padding: 28; -fx-background-color: #f0f2f5;">
+
+        <!-- Encabezado -->
+        <VBox spacing="4">
+            <Label text="Registrar Paciente" styleClass="page-title"/>
+            <Label text="Complete el formulario para ingresar al sistema de triaje"
+                   styleClass="page-subtitle"/>
+        </VBox>
+
+        <!-- ════════════════════════ FORMULARIO ════════════════════════ -->
+        <HBox spacing="24">
+            <!-- Card formulario -->
+            <VBox styleClass="card" spacing="20" HBox.hgrow="ALWAYS" maxWidth="600">
+
+                <!-- Nombre -->
+                <VBox spacing="6">
+                    <Label text="Nombre completo *" styleClass="field-label"/>
+                    <TextField fx:id="txtName"
+                               promptText="Ej: Juan García"
+                               styleClass="text-field"/>
+                </VBox>
+
+                <!-- Edad -->
+                <VBox spacing="6">
+                    <Label text="Edad (años) *" styleClass="field-label"/>
+                    <TextField fx:id="txtAge"
+                               promptText="Ej: 45"
+                               styleClass="text-field"
+                               maxWidth="200"/>
+                </VBox>
+
+                <!-- Síntomas -->
+                <VBox spacing="6">
+                    <Label text="Síntomas / Motivo de consulta *" styleClass="field-label"/>
+                    <TextArea fx:id="txtSymptoms"
+                              promptText="Describa los síntomas principales..."
+                              prefHeight="100"
+                              wrapText="true"
+                              styleClass="text-area"/>
+                </VBox>
+
+                <!-- Nivel de urgencia -->
+                <VBox spacing="6">
+                    <Label text="Nivel de urgencia (Manchester) *" styleClass="field-label"/>
+                    <ComboBox fx:id="cmbLevel" maxWidth="Infinity"
+                              styleClass="combo-box"/>
+                    <HBox spacing="8" style="-fx-padding: 4 0 0 0;">
+                        <Label text="🔴 N1 Resucitación"  style="-fx-font-size:11px; -fx-text-fill:#e74c3c;"/>
+                        <Label text=" 🟠 N2 Emergente"    style="-fx-font-size:11px; -fx-text-fill:#e67e22;"/>
+                        <Label text=" 🟡 N3 Urgente"      style="-fx-font-size:11px; -fx-text-fill:#f39c12;"/>
+                        <Label text=" 🟢 N4 Menos Urgente" style="-fx-font-size:11px; -fx-text-fill:#27ae60;"/>
+                        <Label text=" 🔵 N5 No Urgente"   style="-fx-font-size:11px; -fx-text-fill:#3498db;"/>
+                    </HBox>
+                </VBox>
+
+                <!-- Botones -->
+                <HBox spacing="12">
+                    <Button text="✓ Registrar Paciente"
+                            styleClass="btn-primary"
+                            onAction="#onRegister"
+                            defaultButton="true"/>
+                    <Button text="✕ Limpiar"
+                            styleClass="btn-secondary"
+                            onAction="#onClear"/>
+                </HBox>
+
+                <!-- Mensaje de confirmación / error -->
+                <Label fx:id="lblMessage" text="" visible="false"
+                       wrapText="true" maxWidth="Infinity"/>
+
+            </VBox>
+
+            <!-- Card: info del último registrado -->
+            <VBox spacing="16" HBox.hgrow="ALWAYS">
+                <VBox styleClass="card" spacing="12">
+                    <Label text="Último registrado" styleClass="section-title"/>
+                    <Label fx:id="lblLastRegistered"
+                           text="Aún no se ha registrado ningún paciente en esta sesión."
+                           wrapText="true"
+                           style="-fx-text-fill: #636e72;"/>
+                </VBox>
+
+                <!-- Leyenda de niveles -->
+                <VBox styleClass="card" spacing="10">
+                    <Label text="Escala de Triaje Manchester" styleClass="section-title"/>
+                    <VBox spacing="6">
+                        <Label text="🔴  Nivel 1 — Resucitación"    style="-fx-text-fill:#e74c3c; -fx-font-weight:bold;"/>
+                        <Label text="     Atención inmediata. Riesgo vital inminente."
+                               style="-fx-text-fill:#636e72; -fx-font-size:11px;"/>
+                        <Label text="🟠  Nivel 2 — Emergente"        style="-fx-text-fill:#e67e22; -fx-font-weight:bold;"/>
+                        <Label text="     Atención en menos de 10 minutos."
+                               style="-fx-text-fill:#636e72; -fx-font-size:11px;"/>
+                        <Label text="🟡  Nivel 3 — Urgente"          style="-fx-text-fill:#f39c12; -fx-font-weight:bold;"/>
+                        <Label text="     Atención en menos de 30 minutos."
+                               style="-fx-text-fill:#636e72; -fx-font-size:11px;"/>
+                        <Label text="🟢  Nivel 4 — Menos Urgente"    style="-fx-text-fill:#27ae60; -fx-font-weight:bold;"/>
+                        <Label text="     Atención en menos de 2 horas."
+                               style="-fx-text-fill:#636e72; -fx-font-size:11px;"/>
+                        <Label text="🔵  Nivel 5 — No Urgente"       style="-fx-text-fill:#3498db; -fx-font-weight:bold;"/>
+                        <Label text="     Atención en menos de 4 horas."
+                               style="-fx-text-fill:#636e72; -fx-font-size:11px;"/>
+                    </VBox>
+                </VBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>
