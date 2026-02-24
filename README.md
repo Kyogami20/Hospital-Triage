@@ -263,7 +263,7 @@ java -jar target/meditriage-1.0.jar
 | Arias Mandarachi, Bastian | [Rol] |
 | De la Cruz Antay, Adrian Avelino | [Rol] |
 | Paredes Galvez, Piero Alfonso | [Rol] |
-| [Compañero 7] | [Rol] |
+| Quispe Arango, Juan Pablo | [Rol] |
 | [Compañero 8] | [Rol] |
 
 > **Curso:** Estructura de Datos  
